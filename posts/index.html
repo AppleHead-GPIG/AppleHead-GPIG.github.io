@@ -36,7 +36,7 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://example.org/posts/" />
-<meta property="og:updated_time" content="2021-01-19T14:19:08+08:00" />
+<meta property="og:updated_time" content="2021-01-20T22:13:07+08:00" />
 <meta itemprop="name" content="Posts">
 <meta itemprop="description" content="">
 <meta name="twitter:card" content="summary"/>
@@ -98,6 +98,26 @@
   <article class="pa3 pa4-ns nested-copy-line-height nested-img">
     <section class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy mid-gray"></section>
     <section class="flex-ns flex-wrap justify-around mt5">
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="http://example.org/posts/%E4%BF%AE%E6%94%B9vscode%E4%B8%AD%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90%E7%9A%84htm%E9%BB%98%E8%AE%A4%E9%AA%A8%E6%9E%B6/" class="link black dim">
+        修改VSCode中自动生成的HTM默认骨架
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      修改VSCode中自动生成的HTML语言骨架的一种方式（小白总结大佬勿喷） 事件 萌新今天兴高采烈（fangshengtongku）打开VSCode练习时，出现了一件D疼事。HTML默认的骨架语句丢失了一句，如图： 直接大叫一声：唉，我黑切呢？OK，直接兴高采烈（mmp），重启大法，成功的bug重演。google，一堆英文看不懂，baidu，一堆广告。避免大家遇到相同问题，总结一下搜到的博客：
+ 教你使用 “！”，然后按“TAB” ，生成骨架。文不对题无用贴 用户代码片段，自定义模板。（有用，但是小白的我没看懂）博客：传送门 配置文件Emmet.Extensions Path路径。（有用，但是小白的我没看懂）。博客：传送门  后两种方式大家可以看一下应该也是可以的，但是我没有尝试，现在给大家讲一下我的解决方法（保姆级解释）。
+本人解决方法 有幸搜到了两篇博客，分享给各位，同时感谢博主。
+ 更改vscode默认模板的问题：传送门 VSCode中Emmet修改默认html或css模板snippets：传送门  下面是我结合两篇博客使用的办法，和大家分享一下，萌新小白，望大佬们指点。
+找到该目录下的emmetNodeMain.js文件。（可能目录有区别，因为我的和博客里的就不太一样，给大家提示）  文件地址：  你的安装盘\VSCode\Microsoft VS Code\resources\app\extensions\emmet\dist\node  Code打开文件,你将看见这样的文件   搜索字条
+  &#34;!!!&#34;:&#34;{&lt;!DOCTYPE html&gt;}&#34;, 在搜索栏中点击搜到的结果，点击跳转到代码处  正常代码如下：（本人缺失了meta:edge）  &#34;!!!&#34;:&#34;{&lt;!DOCTYPE html&gt;}&#34;,doc:&#34;html[lang=${lang}]&gt;(head&gt;meta[charset=${charset}]+meta:vp+meta:edge+title{${1:Document}})+body&#34;,&#34;! 我们可以看到这段代码和html骨架标签的对应关系。 1.{&lt;!DOCTYPE html&gt;}&#34;=&lt;!DOCTYPE html&gt; 2.&#34;html[lang=${lang}]=&lt;html lang=&#34;xxx&#34;&gt; 3.meta[charset=${charset}]=&lt;meta charset=&#34;UTF-8&#34;&gt; 4.meta:vp=&lt;meta name=&#34;viewport&#34;content=&#34;width=device-width, initial-scale=1.0,&#34;&gt; 5.meta:edge=&lt;meta http-equiv=&#34;X-UA-Compatible&#34; content=&#34;ie=edge&#34;&gt; 6.title{${1:Document}}=&lt;title&gt;Document&lt;/title&gt; 举例如果要修改默认的mata name骨架使其增加语句：maximum-scale=1.0, user-scalable=no &lt;meta name=&#34;viewport&#34;content=&#34;width=device-width, initial-scale=1.0,&#34;&gt; ==&gt; &lt;meta name=&#34;viewport&#34;content=&#34;width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no&#34;&gt;  在js文件里对meta:vp进行修改，同样的我们搜索代码  meta:vp meta:vp meta:vp 重要的事情说三遍 偷懒不放图了,你将会搜到下面的代码（我的搜索项里有4个，meta：vp字条，选到这个字条）  &#34;meta:utf&#34;:&#34;meta[http-equiv=Content-Type content=&#39;text/html;charset=UTF-8&#39;]&#34;, &#34;meta:vp&#34;: &#34;meta[name=viewport content=&#39;width=${1:device-width}, initial-scale=${2:1.
+    </div>
+  </div>
+</div>
+</div>
       
         <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
   <div class="bg-white mb3 pa4 gray overflow-hidden">
